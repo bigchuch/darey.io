@@ -171,4 +171,4 @@ To simulate both Tom and Jerry's working on the same laptop, you'll switch betww
     - Push Jerry's changes to GitHub:
         ```bash
         git push origin add-contact-info
-        
+        ![image](img/jerry's%20work%20flow%20.png)        
