@@ -154,7 +154,7 @@ To simulate both Tom and Jerry's working on the same laptop, you'll switch betww
         ```bash
         git checkout -b add-contact-info
         ```
-       ![image](img/git%20checkout%20update-footer.png)
+       
         This creates a new branch where Jerry will make his changes, keep them separate from the main project until they are ready to be merged.
 
     - open the index.html file and add contact information: Make your changes to the index.html file by adding contact information. this simulates Jerry's task.
