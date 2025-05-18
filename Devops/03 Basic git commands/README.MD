@@ -105,3 +105,43 @@ To simulate both Tom and Jerry's working on the same laptop, you'll switch betww
         ```bash
         git status
         ```
+        ![image](img/Tom's%20untracked%20file%20.png)
+
+        At this stage, Tom has modified the file, but these changes have not been prepared for a commit in Git. This is indicated by the file name appearing in red in the terminal output, signalling the at the changes are recognised by Git but not yet staged.
+
+    - stage Tom's changes
+        ```bash
+        git add index.html
+        ```
+      This tell GIt that you want to include the updates made to index.html in the next commit. Its like saying, "Okay, i'm happy with these changes and ready to record them."  
+
+    - confirm the changes has been staged for commit
+        ```bash
+        git status
+        ```
+        ![image](img/tom'.png)
+        Now, after staging the changes, the file name will appear in green in the terminal output. This color changes signifies that the file has been successfully staged, making it ready for the next step, which is committing the changes.
+
+    - commit Tom's changes
+        ```bash
+        git commit -m "Upadate navigation bar"
+        ```
+        This take the changes and records them in the repository's history with a message describing what was done. This commit is a miltestone, marking a specific point in the project's development.
+    - push Tom's changes to GitHub
+        ```bash
+        git push origin update-navigation
+        ```
+        ![image](img/tom's%20git%20push%20to%20new%20branch.png)
+
+        this sends Tom's commint from your local branch on your pc to GitHub ( remote repository). its like publushing your work so that other (or in this case,"Jerry") can see and interact with it. This step updates the remote repository with Toms's contribution.
+
+    After commpleting Tom's workflow, you will now simulate Jerry's contribution to the project. To do this , you'll switch back to the main branch and create a new branch for Jerry's work.
+2. Jerry's work
+    - switch to the main branch:
+        ```bash
+        git checkout main
+        ```
+        This command switch you back to the main branch, where you'll simulate Jerry's work.
+    - create a new branch for Jerry's work:
+        ```bash
+        git checkout -b update-footer
