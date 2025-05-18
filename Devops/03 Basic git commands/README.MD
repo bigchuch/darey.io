@@ -146,5 +146,29 @@ To simulate both Tom and Jerry's working on the same laptop, you'll switch betww
         ```bash
         git pull origin update-navigation
         ```
+        ![image](img/git%20pull%20origin%20.png)
+
         This command fetches the latest changes from the remote repository (GitHub) and merges them into your local main branch. This ensures that you have the latest version of the project before starting your work.
-        
+
+    - create a new branch for Jerry's work:
+        ```bash
+        git checkout -b add-contact-info
+        ```
+       ![image](img/git%20checkout%20update-footer.png)
+        This creates a new branch where Jerry will make his changes, keep them separate from the main project until they are ready to be merged.
+
+    - open the index.html file and add contact information: Make your changes to the index.html file by adding contact information. this simulates Jerry's task.
+    - Stage Jerry's changes:
+        ```bash
+        git add index.html
+        ```
+        This command stages the changes jerry made to the index.html file, preparing them for commit.
+    - Commit Jerry's changes:
+        ```bash
+        git commit -m "Add contact information"
+        ```
+        This saved Jerry's changes in the branch history, with a message descreipthing what was done.
+    - Push Jerry's changes to GitHub:
+        ```bash
+        git push origin add-contact-info
+        ```
