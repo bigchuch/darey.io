@@ -142,6 +142,9 @@ To simulate both Tom and Jerry's working on the same laptop, you'll switch betww
         git checkout main
         ```
         This command switch you back to the main branch, where you'll simulate Jerry's work.
-    - create a new branch for Jerry's work:
+    - pull the latest changes from the remote repository:
         ```bash
-        git checkout -b update-footer
+        git pull origin update-navigation
+        ```
+        This command fetches the latest changes from the remote repository (GitHub) and merges them into your local main branch. This ensures that you have the latest version of the project before starting your work.
+        
