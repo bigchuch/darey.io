@@ -41,11 +41,13 @@ After both Tom and Jerry have pushed their work to their respective branches, th
 *   Provide a title and description for the pull request. This description can be used to explain the changes made and the context for the merge.
 *   after filling in the information, click the "Create pull request" button again to officially create the pull request.
 ![image](img/Toms%20pull%20request.png)
+![image](img/both%20tom%20and%20jerry%20pull%20request%20.png)
 
 ### Reviewing and Merging Tom's Pull Request
 
 Once the pull request is created, it becomes visible to other team members who can review the changes, leave comments, and request additional modifications if necessary (This is an example of what collaboration is about in DevOps). When the team agrees that the changes are ready and good to go, someone with merge permissions can merge the pull request, incorporating the changes from Tom's **update-navigation** branch into the main branch.
-
+![image](img/team%20review%20toms%20pull%20request.png)
+![image](img/pull%20request%20merged%20for%20tom%20.png)
 Following the same process, Jerry would create a pull request for his **add-contact-info** branch after Tom's changes have been merged, ensuring that the project stays up to date and conflicts are minimized.
 
 ### Updating Jerry's Branch with Latest Changes
