@@ -85,3 +85,23 @@ To simulate both Tom and Jerry's working on the same laptop, you'll switch betww
         git checkout -b update-navigation
         ```
     ![image](img/creating%20a%20new%20branch%20for%20tom's%20work.png)
+
+    This create a new branch named "update-navigation" ( it cane be named to wheatever you want). The command also automatically switches to the newly created brach from the "main" branch. This branch "update-navigation" is where you'll simulate Tom's updates to the website without affecting whatever is tin the main branch.
+    
+    - Check the branch again to see your newly created bramch.
+        ```bash
+        git branch
+        ```
+        ![image](img/toms%20git%20branch%20show.png)
+
+        Running git branch again, now shows your newly created branch in green, indicating that you are currently on it.
+    - Recall you created an empty file named index.html. The file will also exist in the 'update-navigation' branch: open the index.html and add the content below:
+        ```bash
+        This is the Tom adding Navigation to the AI-website
+        ```
+        This simulates Tom's contribtion to the project. The text represent the work he's doing ont he navigation bar. in the real world , this will be an actual software code.
+    
+    - Check changes has not been staged
+        ```bash
+        git status
+        ```
