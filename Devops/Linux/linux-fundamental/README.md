@@ -177,4 +177,96 @@ Lets break down the command:
 
 Once you establish a successful connection, you should see an output like the below which proves that you have successfully connected to your remote server.
 
-             
+![](./img/ssh%20into%20vm%20.png)
+
+## Package Managers
+
+Most of the time, when working on linux, there will be the need to install tools. Think about it, the servers are used to host websites, and there has to be a tool that will help in the rendering of the web ages. A commonly used tool is called "Nginx".
+
+Since the servers are not your regular computers where you can go to a browser to click and download, there is the need to have package managers that can help achieve this.
+
+Package managers in Linux are tools that automate the process of installing, updating, configuring, and removing software packages on a Linux server. They simplify the management of software by handling dependencies, versioning, and installation procedures. There are several package managers used in various Linux distributions.
+
+**Commonly Used Package Managers**
+
+*   **APT (Advanced Package Tool):** Used by Debian-based distributions such as Debian, Ubuntu, and derivatives. Commands include `apt-get` and `apt`. You will get to use this a lot very soon.
+*   **YUM (Yellowdog Updater Modified):** Originally used by Red Hat and CentOS, `YUM` is now largely replaced by `dnf` in modern Red Hat-based distributions. It simplifies package management by resolving dependencies just like `apt`.
+*   **DNF (Dandified YUM):** Used in modern versions of Red Hat-based distributions as a replacement for YUM. It provides improved performance and resolves some of the limitations of the older YUM tool.
+
+## Installing, Updating and Removing Software
+
+Since we are already on an Ubuntu based server, lets explore how to install tools on a linux server.
+
+1.  **Updating Package Lists** Before installing new software or updating existing packages, it's important to refresh the package lists.
+
+    ```bash
+    sudo apt update    # For Debian/Ubuntu-based systems
+    ```
+
+    ```bash
+    sudo yum update    # For Red Hat/Fedora-based systems
+    ```
+
+    Note: Ignore `sudo` for now. We will explain that soon.
+![](./img/sudo%20apt%20update.png)
+
+
+2.  **Installing Software Packages**
+
+    Lets try to install a command called `tree`
+
+    The `tree` command is commonly used to visually see the file system structure on a linux server. So let's install it with the command below.
+
+    Debian/Ubuntu
+
+    ```bash
+    sudo apt install tree
+    ```
+
+    If you were on other Linux distribution using `yum`, the command would look like this.
+
+    Red Hat/Fedora
+
+    ```bash
+    sudo yum install tree
+    ```
+    ![](./img/sudo%20apt%20install%20tree.png)
+
+
+
+
+          
+3.  **Verifying Installed Packages** To confirm that the desired package or software has been successfully installed, simply run the `tree` command, and specify the path you want to see the tree structure.
+
+    For example;
+
+    ```bash
+    tree ~/Downloads
+    ```
+
+    Play around with this tree tool and specify different folders on the server.
+
+4.  **Updating Installed Packages** Keep your system up-to-date by updating installed packages.
+
+    ```bash
+    sudo apt upgrade
+    ```
+
+5.  **Removing Software Package** To remove the `tree` package we installed earlier, run the below command
+
+    ```bash
+    sudo apt remove tree
+    ```
+    ![](./img/suto%20apt%20remove%20tree.png)
+
+**Practice:** Explore other tools you can install on a Linux server and practice everything again. For example, install the tool `nginx`
+
+In the next step, we would be engaging in more hands on project that involve using commands on a Linux system. Working with Linux commands typically includes tasks such as navigating the file system, managing files and directories and manipulating permissions.
+
+        
+
+        
+        
+        
+
+        
