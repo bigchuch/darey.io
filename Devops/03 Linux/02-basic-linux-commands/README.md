@@ -117,6 +117,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
     * Show the new created directories on the terminal.
     * Navigate into one of them.
     * Show the full path where you currently are on the screen.  
+    
     ![img](./img/side%20task%20.png)
 
     **The `ls` command:** List files and directories. Running it without a flag or parameter will display a list of files and directories in the current working directory.
