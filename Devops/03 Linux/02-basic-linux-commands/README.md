@@ -183,11 +183,11 @@ The rm command is to delete files within a directory.
 **caution:** This is a very dangerous command as it deletes the files completely. So must be used with care.
 
 To remove a single file:
-```
+```bash
 rm filename
 ```
 To remmove multiple files, enter the following command:
-```
+```bash
 rm filename1 filename2 filename3
 ```
 
@@ -195,7 +195,7 @@ rm filename1 filename2 filename3
 
 Here are some acceptable options you can add:
 
-```
+```bash
 -! prompts system confirmation before deleting a file. (Denote "interractive")
 -f allows the system to remove without a confirmation. ( Denotes "force")
 -r deletes files and directories recursively.
@@ -205,7 +205,7 @@ Here are some acceptable options you can add:
 the touch command allow you to creat an empty file.
 
 for example, enter the follow command to create a HTML Web in the Documents directory:
-```
+```bash
 touch /home/ubuntu/Documents/Web.html
 ```
 ![img](/img/touch%20command%20.png)
@@ -213,11 +213,11 @@ touch /home/ubuntu/Documents/Web.html
 **find command**
  use the find command to search for files within a specific directory and perfom subsequent operations. here the general syntax:
 
- ```
+ ```bash
  find [option] [path] [expression]
 ```
 for example, to look for a file name **notes.txt** within a folder and it subfolders:
-```
+```bash
 find /home -name notes.txt
 ```
 ![img](/img/find%20commad.png)
