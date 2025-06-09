@@ -192,3 +192,32 @@ rm filename1 filename2 filename3
 ```
 
 ![img](/img/deleting%201%20file%20and%20multiple%20files.png)
+
+Here are some acceptable options you can add:
+
+```
+-! prompts system confirmation before deleting a file. (Denote "interractive")
+-f allows the system to remove without a confirmation. ( Denotes "force")
+-r deletes files and directories recursively.
+```
+
+**touch command**
+the touch command allow you to creat an empty file.
+
+for example, enter the follow command to create a HTML Web in the Documents directory:
+```
+touch /home/ubuntu/Documents/Web.html
+```
+![img](/img/touch%20command%20.png)
+
+**find command**
+ use the find command to search for files within a specific directory and perfom subsequent operations. here the general syntax:
+
+ ```
+ find [option] [path] [expression]
+```
+for example, to look for a file name **notes.txt** within a folder and it subfolders:
+```
+find /home -name notes.txt
+```
+![img](/img/find%20commad.png)
