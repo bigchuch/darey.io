@@ -1,12 +1,15 @@
-# linux Commands Deep Dive
+# Linux Commands Deep Dive
 
-**Now that you a client terminal and have acceded your remove server, what next?**
-For the nexxt couple of porjects, you will learn a lot about linux commands, thereitw time to get your hands dirty.
+**Now that you have a client terminal and have accessed your remote server, what next?**
+For the next couple of projects, you will learn a lot about Linux commands, so it's time to get your hands dirty.
 
-## what is a linux Command?
-A Linux command refers to a progam or utility that runs in the command-line interface (CLI). The CLI is a text-based environment where you interact with the system by typing commands and receiving output.
+## What is a Linux Command?
 
-Linux commands are executed by entering text into the terminal and pressing enter. These command enable you to perform a wide range of tasks, from managing files and directories to running programs and configuring the system, and more.
+A Linux command refers to a program or utility that runs in the command-line interface (CLI). The CLI is a text-based environment where you interact with the system by typing commands and receiving output.
+
+Linux commands are executed by entering text into the terminal and pressing Enter. These commands enable you to perform a wide range of tasks, from managing files and directories to running programs and configuring the system.
+
+### Basic Command Structure
 
 The general syntax of a Linux command is as follows:
 ```
@@ -58,7 +61,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
    sudo mkdir /root/example
    ```
    ![img](/img/succeful%20creation%20of%20folder%20using%20sudo.png)
-This command uses `sudo` to grant the necessary permissions for folder creation in a protected directory.
+    This command uses `sudo` to grant the necessary permissions for folder creation in a protected directory.
 
     **Verify the folder's creation:** The command should succeed without errors. You can check the folder's existence by listing the content of the `/root` directory using the `ls` command. it should include the newly created folder in the output on the screen. though you may need t use sudo again to view the contents of the directory
     ```bash
@@ -86,138 +89,140 @@ This command uses `sudo` to grant the necessary permissions for folder creation 
     - **User-specific applications**(/usr/local/bin): This directory is used to install local applications and binaries.
     - **User-specific configuration files**(/home/username/.config): This directory stores user-specific configuration files.
 
-**`cd`** command: To navigate through Linux files and directories, use the `cd` command.
+    **`cd`** command: To navigate through Linux files and directories, use the `cd` command.
 
-Lets say toy want to navigate the root fileystem on your server. Remember, the root filesystem is like the "C:" drive on a Windows computer. its the starting point of folders and its represented by the forward slash `/`.
-To navigate to the root filesystem, you can use the `cd` command followed by the forward slash `/`. Here's how to do it:
+    Lets say toy want to navigate the root fileystem on your server. Remember, the root filesystem is like the "C:" drive on a Windows computer. its the starting point of folders and its represented by the forward slash `/`.
+    To navigate to the root filesystem, you can use the `cd` command followed by the forward slash `/`. Here's how to do it:
 
-To confirm that you are in the root filesystem, you can use the `pwd` command.
-```bash
-sudo cd /
-```
-![img](/img/cd%20&%20pwd.png)
+    To confirm that you are in the root filesystem, you can use the `pwd` command.
+    ```bash
+    sudo cd /
+    ```
+    ![img](/img/cd%20&%20pwd.png)
 
-To list the files in the current directory, you can use the `ls -l` command.
-```bash
-ls
-```
-Below is the output of the ls command
-![img](/img/list%20of%20file%20directory%20.png)
+    To list the files in the current directory, you can use the `ls -l` command.
+    ```bash
+    ls
+    ```
+    Below is the output of the ls command
+    ![img](/img/list%20of%20file%20directory%20.png)
 
-if you want to navigate to any of the directorys in the output, lets say the `usr` directory, you can use the `cd` command followed by the directory name. Here's how to do it:
-```bash
-cd /usr
-```
-## lets create a side task
-* create a directory called `photos` inside the `/usr` directory
-* navigate to the `photos` directory
-* create 3 more random dictorys inside the `photos` directory
-* Show the new created on the terminal 
-* Navigate into one of them
-* Show the full path whre you currently are on the screen
-![img](/img/side%20task%20.png)
+    if you want to navigate to any of the directorys in the output, lets say the `usr` directory, you can use the `cd` command followed by the directory name. Here's how to do it:
+    ```bash
+        cd /usr
+    ```
+    ## lets create a side task
+    * create a directory called `photos` inside the `/usr` directory
+    * navigate to the `photos` directory
+    * create 3 more random dictorys inside the `photos` directory
+    * Show the new created on the terminal 
+    * Navigate into one of them
+    * Show the full path whre you currently are on the screen
+    ![img](/img/side%20task%20.png)
 
-The `ls` command: list files and directories. Running it without a flag or parameter will display a list of files and directories in the current working directory.
+    The `ls` command: list files and directories. Running it without a flag or parameter will display a list of files and directories in the current working directory.
 
-To see other directories' content, type `ls` followed by the directory name. For example, to see the contents of the `/root` directory, type:
-```bash
-ls /root
-``` 
-Here are some options you use with the `ls` command:
+    To see other directories' content, type `ls` followed by the directory name. For example, to see the contents of the `/root` directory, type:
+    ```bash
+    ls /root
+    ``` 
+    Here are some options you use with the `ls` command:
 
-```
-ls -R (recursive): This option lists subdirectories and their contents recursively.
+    ```
+    ls -R (recursive): This option lists subdirectories and their contents recursively.
 
-ls -a (all): This option displays all files and directories, including hidden ones (those starting with a dot).
+    ls -a (all): This option displays all files and directories, including hidden ones (those starting with a dot).
 
-ls -lh (long format with human-readable file sizes): This option displays detailed information about each file or directory, including permissions, ownership, and file size in a human-readable format.
-```
-**cat command**
-**`Concatenate`**, or `cat`, is a command-line utility in Linux that is used to display the contents of one or more text files on the terminal. It is commonly used to read and display the contents of text files, such as configuration files, log files, or any other text-based data.
-Here's the basic syntax of the `cat` command:
-```bash
-sudo cat /etc/os-release
-```
-Displays the content of `os-release` file in `/etc` directory.
-![img](/img/cat%20comand%20.png)
+    ls -lh (long format with human-readable file sizes): This option displays detailed information about each file or directory, including permissions, ownership, and file size in a human-readable format.
+    ```
+    **cat command**
+    **`Concatenate`**, or `cat`, is a command-line utility in Linux that is used to display the contents of one or more text files on the terminal. It is commonly used to read and display the contents of text files, such as configuration files, log files, or any other text-based data.
+    Here's the basic syntax of the `cat` command:
+    ```bash
+        sudo cat /etc/os-release
+    ```
+    Displays the content of `os-release` file in `/etc` directory.
+    ![img](/img/cat%20comand%20.png)
 
-**cp command**
+    **cp command**
 
-use the `cp` command to copy files and directories and their content. Taje a look at the follow use cases.
-To copy one file from the current directory, enter `cp` followed by the name of the file you want to copy and the destination path. For example, to copy the file `example.txt` to the `/home/ubuntu/Documents` directory, enter:
-```bash
-cp example.txt /home/ubuntu/Documents/
-```
-this will copy `example.txt` to the `Documents` directory.
-![img](/img/copy%20files%20cp%20command.png)
+    use the `cp` command to copy files and directories and their content. Taje a look at the follow use cases.
+    To copy one file from the current directory, enter `cp` followed by the name of the file you want to copy and the destination path. For example, to copy    the file `example.txt` to the `/home/ubuntu/Documents` directory, enter:
+    ```bash
+        cp example.txt /home/ubuntu/Documents/
+    ```
+    this will copy `example.txt` to the `Documents` directory.
+    ![img](/img/copy%20files%20cp%20command.png)
 
-To copy multiple files, enter the `cp` command followed by the names of the files you want to copy and the destination path. For example, to copy the files `example1.txt` and `example2.txt` to the `/home/ubuntu/Documents` directory, enter:
-```bash
-cp example1.txt example2.txt /home/ubuntu/Documents/
-```
-To copy the content of a file to another file, enter the `cp` command followed by the name of the source file and the name of the destination file. For example, to copy the content of `example.txt` to `new_example.txt`, enter:
-```bash
-cp example.txt new_example.txt
-```
-To compy entire directory, use the `cp` command followed by the `-r` flag, the name of the source directory, and the destination path. For example, to copy the `Documents` directory to the `/home/ubuntu` directory, enter:
-```bash
-cp -r Documents /home/ubuntu/
-```
-**mv command**
+    To copy multiple files, enter the `cp` command followed by the names of the files you want to copy and the destination path. For example, to copy the   files `example1.txt` and `example2.txt` to the `/home/ubuntu/Documents` directory, enter:
+    ```bash
+    cp example1.txt example2.txt /home/ubuntu/Documents/
+    ```
+    To copy the content of a file to another file, enter the `cp` command followed by the name of the source file and the name of the destination file. For     example, to copy the content of `example.txt` to `new_example.txt`, enter:
 
-The primnary use of the `mv` command is to move files and directories. It is used to rename files and directories, or to move them to different locations.
-To rename a file, enter the `mv` command followed by the name of the file you want to rename and the new name you want to give it. For example, to rename the file `example.txt` to `new_example.txt`, enter:
-```bash
-mv example.txt new_example.txt
-```
-To move a file to a different directory, enter the `mv` command followed by the name of the file you want to move and the destination path. For example, to move the file `example.txt` to the `/home/ubuntu/Documents` directory, enter:
-```bash
-mv example.txt /home/ubuntu/Documents/
-```
-![img](/img/move%20file%20from%20one%20folder%20to%20another.png)
+    ```bash
+    cp example.txt new_example.txt
+    ```
+    To compy entire directory, use the `cp` command followed by the `-r` flag, the name of the source directory, and the destination path. For example, to  copy the `Documents` directory to the `/home/ubuntu` directory, enter:
 
-**rm command**
+    ```bash
+        cp -r Documents /home/ubuntu/
+    ```
+    **mv command**
 
-The rm command is to delete files within a directory.
+    The primnary use of the `mv` command is to move files and directories. It is used to rename files and directories, or to move them to different locations.
+    To rename a file, enter the `mv` command followed by the name of the file you want to rename and the new name you want to give it. For example, to rename the file `example.txt` to `new_example.txt`, enter:
+    ```bash
+    mv example.txt new_example.txt
+    ```
+    To move a file to a different directory, enter the `mv` command followed by the name of the file you want to move and the destination path. For example, to move the file `example.txt` to the `/home/ubuntu/Documents` directory, enter:
+    ```bash
+    mv example.txt /home/ubuntu/Documents/
+    ```
+    ![img](/img/move%20file%20from%20one%20folder%20to%20another.png)
 
-**caution:** This is a very dangerous command as it deletes the files completely. So must be used with care.
+    **rm command**
 
-To remove a single file:
-```bash
-rm filename
-```
-To remmove multiple files, enter the following command:
-```bash
-rm filename1 filename2 filename3
-```
+    The rm command is to delete files within a directory.
 
-![img](/img/deleting%201%20file%20and%20multiple%20files.png)
+    **caution:** This is a very dangerous command as it deletes the files completely. So must be used with care.
 
-Here are some acceptable options you can add:
+    To remove a single file:
+    ```bash
+    rm filename
+    ```
+    To remmove multiple files, enter the following command:
+    ```bash
+        rm filename1 filename2 filename3
+    ```
 
-```bash
--! prompts system confirmation before deleting a file. (Denote "interractive")
--f allows the system to remove without a confirmation. ( Denotes "force")
--r deletes files and directories recursively.
-```
+    ![img](/img/deleting%201%20file%20and%20multiple%20files.png)
 
-**touch command**
-the touch command allow you to creat an empty file.
+    Here are some acceptable options you can add:
 
-for example, enter the follow command to create a HTML Web in the Documents directory:
-```bash
-touch /home/ubuntu/Documents/Web.html
-```
-![img](/img/touch%20command%20.png)
+    ```bash
+    -! prompts system confirmation before deleting a file. (Denote "interractive")
+    -f allows the system to remove without a confirmation. ( Denotes "force")
+    -r deletes files and directories recursively.
+    ```
 
-**find command**
- use the find command to search for files within a specific directory and perfom subsequent operations. here the general syntax:
+    **touch command**
+    the touch command allow you to creat an empty file.
 
- ```bash
- find [option] [path] [expression]
-```
-for example, to look for a file name **notes.txt** within a folder and it subfolders:
-```bash
-find /home -name notes.txt
-```
-![img](/img/find%20commad.png)
+    for example, enter the follow command to create a HTML Web in the Documents directory:
+    ```bash
+    touch /home/ubuntu/Documents/Web.html
+    ```
+    ![img](/img/touch%20command%20.png)
+
+    **find command**
+    use the find command to search for files within a specific directory and perfom subsequent operations. here the general syntax:
+
+    ```bash
+    find [option] [path] [expression]
+    ```
+    for example, to look for a file name **notes.txt** within a folder and it subfolders:
+    ```bash
+    find /home -name notes.txt
+    ```
+    ![img](/img/find%20commad.png)
