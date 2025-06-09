@@ -54,13 +54,13 @@ In some directories, especially system-level ones like `/root`, you need elevate
    ```
 
 3. You will receive a permission denied error message. This is because you don't have the necessary privileges to create files or folders in the `/root` directory.  
-    ![img](/img/trying%20to%20make%20a%20dir%20in%20root%20folder.png)
+    ![img](./img/trying%20to%20make%20a%20dir%20in%20root%20folder.png)
 
 4. To create the folder successfully using `sudo`, use the following command:
     ```bash
     sudo mkdir /root/example
     ```
-    ![img](/img/succeful%20creation%20of%20folder%20using%20sudo.png)  
+    ![img](./img/succeful%20creation%20of%20folder%20using%20sudo.png)  
     This command uses `sudo` to grant the necessary permissions for folder creation in a protected directory.
 
     **Verify the folder's creation:** The command should succeed without errors. You can check the folder's existence by listing the content of the `/root` directory using the `ls` command. It should include the newly created folder in the output on the screen. Though you may need to use sudo again to view the contents of the directory:
@@ -97,14 +97,14 @@ In some directories, especially system-level ones like `/root`, you need elevate
     ```bash
     sudo cd /
     ```
-    ![img](/img/cd%20&%20pwd.png)
+    ![img](./img/cd%20&%20pwd.png)
 
     To list the files in the current directory, you can use the `ls -l` command.
     ```bash
     ls
     ```
     Below is the output of the ls command  
-    ![img](/img/list%20of%20file%20directory%20.png)
+    ![img](./img/list%20of%20file%20directory%20.png)
 
     If you want to navigate to any of the directories in the output, let's say the `usr` directory, you can use the `cd` command followed by the directory name. Here's how to do it:
     ```bash
@@ -117,7 +117,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
     * Show the new created directories on the terminal.
     * Navigate into one of them.
     * Show the full path where you currently are on the screen.  
-    ![img](/img/side%20task%20.png)
+    ![img](./img/side%20task%20.png)
 
     **The `ls` command:** List files and directories. Running it without a flag or parameter will display a list of files and directories in the current working directory.
 
@@ -141,7 +141,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
         sudo cat /etc/os-release
     ```
     Displays the content of the `os-release` file in the `/etc` directory.  
-    ![img](/img/cat%20comand%20.png)
+    ![img](./img/cat%20comand%20.png)
 
     **cp command**
 
@@ -151,7 +151,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
         cp example.txt /home/ubuntu/Documents/
     ```
     This will copy `example.txt` to the `Documents` directory.  
-    ![img](/img/copy%20files%20cp%20command.png)
+    ![img](./img/copy%20files%20cp%20command.png)
 
     To copy multiple files, enter the `cp` command followed by the names of the files you want to copy and the destination path. For example, to copy the files `example1.txt` and `example2.txt` to the `/home/ubuntu/Documents` directory, enter:
     ```bash
@@ -178,7 +178,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
     ```bash
     mv example.txt /home/ubuntu/Documents/
     ```
-    ![img](/img/move%20file%20from%20one%20folder%20to%20another.png)
+    ![img](./img/move%20file%20from%20one%20folder%20to%20another.png)
 
     **rm command**
 
@@ -195,7 +195,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
         rm filename1 filename2 filename3
     ```
 
-    ![img](/img/deleting%201%20file%20and%20multiple%20files.png)
+    ![img](./img/deleting%201%20file%20and%20multiple%20files.png)
 
     Here are some acceptable options you can add:
 
@@ -212,7 +212,7 @@ In some directories, especially system-level ones like `/root`, you need elevate
     ```bash
     touch /home/ubuntu/Documents/Web.html
     ```
-    ![img](/img/touch%20command%20.png)
+    ![img](./img/touch%20command%20.png)
 
     **find command**  
     Use the `find` command to search for files within a specific directory and perform subsequent operations. Here's the general syntax:
@@ -224,4 +224,4 @@ In some directories, especially system-level ones like `/root`, you need elevate
     ```bash
     find /home -name notes.txt
     ```
-    ![img](/img/find%20commad.png)
+    ![img](./img/find%20commad.png)
