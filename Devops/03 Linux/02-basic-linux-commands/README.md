@@ -54,13 +54,13 @@ In some directories, especially system-level ones like `/root`, you need elevate
    ```
 
 3. You will receive a permission denied error message. This is because you don't have the necessary privileges to create files or folders in the `/root` directory.
-![img](/img/trying%20to%20make%20a%20dir%20in%20root%20folder.png)
+    ![img](/img/trying%20to%20make%20a%20dir%20in%20root%20folder.png)
 
 4. To create the folder succesfuly use `sudo`, use the following command:
-   ```bash
-   sudo mkdir /root/example
-   ```
-   ![img](/img/succeful%20creation%20of%20folder%20using%20sudo.png)
+    ```bash
+    sudo mkdir /root/example
+    ```
+    ![img](/img/succeful%20creation%20of%20folder%20using%20sudo.png)
     This command uses `sudo` to grant the necessary permissions for folder creation in a protected directory.
 
     **Verify the folder's creation:** The command should succeed without errors. You can check the folder's existence by listing the content of the `/root` directory using the `ls` command. it should include the newly created folder in the output on the screen. though you may need t use sudo again to view the contents of the directory
