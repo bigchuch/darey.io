@@ -65,7 +65,7 @@ Nano’s ease of use extends to its keyboard shortcuts, making it accessible eve
     nano nano_file.txt
     ```    
 
-    ou’ll enter the Nano editor interface.
+  You'll enter the Nano editor interface.
 
 - **Entering and Editing Text:** Type a few lines into the file. Nano has a simple interface; you can start typing immediately.
 - **aving Changes:** Save your changes by pressing Ctrl + O. Nano will prompt you to confirm the filename. Press Enter.
