@@ -283,7 +283,7 @@ Use the usermod command to add users to the group. For instance, to add users �
 sudo usermod -aG developers johndoe
 ```
 
-	•	The -aG options append the “developers” group to the users’ existing group memberships.
+	The -aG options append the “developers” group to the users’ existing group memberships.
 
 ⸻
 
@@ -291,6 +291,39 @@ sudo usermod -aG developers johndoe
 
 To confirm the group memberships for a specific user, use the id command. For example, to check the group memberships for the user johndoe:
 
+```bash
 id johndoe
+```
+This command displays information abouut the user **Johndoe**, including the groups they belong to, shuch as **developers**
 
-You can copy this directly into any Markdown document or combine it with previous sections. Let me know if you'd like a full consolidated guide!
+![](./img/id%20johndoe.png)
+
+## 🧹 Deleting a User
+
+To delete a user, run the command below:
+
+```bash
+sudo userdel username
+```
+### Ensuring Proper Group Permissions
+
+Groups in Linux are often used to manage permissions for files and directories. Ensure that the relevant files or directories have the appropriate group ownership and permissions.
+
+➤ Grant Group Ownership
+
+To grant the "developers" group ownership of a directory:
+
+```bash
+sudo chown :developers /path/to/directory
+```
+To grant read and write permissions to the group:
+
+```bash
+sudo chmod g+rw /path/to/directory
+```
+## side hustle task 3
+ - Create a group on the server and name it **devops**
+ - Create 5  user ['**Mary**', '**Mohammed**', '**Ravi**', '**Tunji**', '**Sofia**'], and ensure each belongs to the devops group
+- create a folder for each user in the **/home** directory
+- Ensure that the group ownership of each created folder belongs to the **devops** group
+![img](./img/side%20task%203.png)
